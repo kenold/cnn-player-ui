@@ -1,0 +1,39 @@
+$color-accent: red;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: $color-accent;
+    // overflow-y: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.player-container {
+    height: 100%;
+}
+
+.person {
+    &__list {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    &__item {
+        // border: 4px solid #fff;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 80px;
+        left: 20px;
+        z-index: 999;
+    }
+}
