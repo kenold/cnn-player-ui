@@ -1,0 +1,166 @@
+:root {
+  --color-accent: hsl(232, 47%, 56%);
+  --color-accent-light: hsla(232, 47%, 70%, .2);
+  --color-base: #000;
+  --color--dark: #111;
+  --color-link: hsla(212, 97%, 43%);
+  --color-light: #888;
+  --color-white: #fff;
+  --font-sans: Inter;
+  --radius: 5px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .085), 0 8px 24px rgba(0, 0, 0, .1);
+  --shadow-md: 0 1px 8px rgba(0, 0, 0, .085), 0 1px 8px rgba(0, 0, 0, .1);
+  --site-width: 800px; }
+
+/*  fonts for offline use -
+    or you can use @import if you have internet access: @import url('https://rsms.me/inter/inter.css');
+    if you use @import, you don't need the @font-face below
+*/
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Inter-Regular.woff2) format("woff2"), url(/assets/fonts/Inter-Regular.woff) format("woff"); }
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  src: url(/assets/fonts/Inter-Italic.woff2) format("woff2"), url(/assets/fonts/Inter-Italic.woff) format("woff"); }
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/Inter-Medium.woff2) format("woff2"), url(/assets/fonts/Inter-Medium.woff) format("woff"); }
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/Inter-Bold.woff2) format("woff2"), url(/assets/fonts/Inter-Bold.woff) format("woff"); }
+
+html {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px; }
+
+body {
+  font-weight: 400; }
+
+a {
+  color: var(--color-base);
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+p {
+  font-size: 16;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 14px 0 16px; }
+
+a.skip-link {
+  position: fixed;
+  top: -30em;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: .5em 1em;
+  font-size: 1em;
+  text-align: center;
+  transition: top .1s linear; }
+
+.container {
+  padding: 0 16px; }
+  @media (min-width: 768px) {
+    .container {
+      max-width: var(--site-width);
+      margin: 0 auto; } }
+
+.main-header {
+  margin: 1rem 0 1.75rem 0; }
+  .main-header .container--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px; }
+    @media (min-width: 768px) {
+      .main-header .container--header {
+        max-width: var(--site-width);
+        margin: 0 auto; } }
+  .main-header h1 {
+    color: var(--color-base);
+    font-size: 40;
+    font-size: 2.5rem;
+    font-weight: 700; }
+
+.main-nav__list {
+  display: flex;
+  justify-content: space-around; }
+
+.main-nav__item a {
+  padding: 15px 20px 15px 20px;
+  transition: all 300ms; }
+  .main-nav__item a:hover {
+    background-color: var(--color-accent-light);
+    border-radius: var(--radius); }
+
+.main-footer {
+  margin: 2rem 0; }
+
+/********
+ The CSS import below is for demonstration only. You should remove it before you push your site to production
+********/
+/********
+ This CSS file is for demonstration only. You should delete it before you push your site to production
+********/
+.demo__img {
+  box-shadow: var(--shadow-md); }
+
+.demo__heading {
+  margin: 1.5rem 0; }
+
+.demo li {
+  display: none;
+  font-size: 2rem;
+  font-weight: bold; }
+  .demo li:first-child {
+    display: block; }
+
+.demo span {
+  color: var(--color-accent); }
+  .demo span.highlight {
+    background: linear-gradient(var(--color-accent-light), var(--color-accent-light));
+    background-size: 100% 100%;
+    color: var(--color-base);
+    font-weight: 500;
+    padding: 0 .5rem; }
+
+@media (min-width: 640px) {
+  .demo li.mobile {
+    display: none; }
+  .demo li.mobile-landscape {
+    display: block; } }
+
+@media (min-width: 768px) {
+  .demo li.mobile-landscape {
+    display: none; }
+  .demo li.tablet-portrait {
+    display: block; } }
+
+@media (min-width: 1024px) {
+  .demo li.mobile {
+    display: none; }
+  .demo li.tablet-portrait {
+    display: none; }
+  .demo li.tablet-landscape {
+    display: block; } }
+
+@media (min-width: 1280px) {
+  .demo li:nth-child(-n+4) {
+    display: none; }
+  .demo li.laptop-desktop {
+    display: block; } }
