@@ -15,7 +15,6 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
-  margin-top: 50px;
   text-transform: uppercase; }
 
 img {
@@ -26,18 +25,16 @@ img {
   height: 100%; }
 
 .player-container {
-  position: relative;
-  display: flex;
-  justify-content: center; }
-
-.bottom {
-  color: #fff; }
+  position: relative; }
 
 .lt {
+  color: #fff;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  column-gap: 5px; }
+  column-gap: 10px;
+  position: absolute;
+  bottom: 20px; }
   .lt__title {
     grid-column: 2 / 6;
     grid-row: 1 / 2;
@@ -46,7 +43,10 @@ img {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: 600;
-    padding: 5px 15px 5px 15px; }
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px; }
   .lt__description {
     grid-column: 2 / 11;
     grid-row: 2 / 4;
@@ -88,10 +88,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .lt__show {
+  .lt__show-name {
     grid-column: 10 / 12;
     grid-row: 4 / 5;
-    background-color: #000;
+    background-color: #484848;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-top: 5px;
     margin-left: 60px;
     padding: 10px;
@@ -104,6 +106,3 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 5px;
   height: 100%; }
-
-.media__item {
-  border: 2px solid #fff; }
